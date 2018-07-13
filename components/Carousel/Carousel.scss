@@ -1,0 +1,31 @@
+.carouselImages {
+    width:100%;
+    height:850px;
+    @media only screen and (min-width: 600px) and (max-width: 800px) {
+        height:600px;
+    }
+    @media only screen and (min-width: 300px) and (max-width: 600px) {
+        height:300px;
+    }
+}
+
+.captionText {
+    color: white;
+    text-decoration: none;
+}
+.captionText:hover {
+    color: white;
+}
+.d-none {
+    display: block !important    
+}
+.carousel-caption {
+    bottom:365px;
+
+    @media only screen and (min-width: 600px) and (max-width: 800px) {
+        bottom:100px;
+    }
+    @media only screen and (min-width: 300px) and (max-width: 600px) {
+        bottom:100px;
+    }
+}

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+$orginal-brown:#b88f4d;
+$new-beige:#d9b99b;
+html,body {
+    background-color: $new-beige;
+    font-family: 'Palatino', cursive;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .App {
+    // text-align: center;
+    background-color: white;
+    color: black;
+    margin-bottom: 5.0rem;
+  }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .App-header {
+    background-color: #f4eee1;
+    height: 150px;
+    padding: 20px;
+    color: black;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  // .underline {
+  //   text-decoration: underline;
+  // }
+
+  .whatsappRow {
+    background:$new-beige;
+    min-height:750px;
+    @media only screen and (min-width:720px) {
+    min-height:300px;
+    text-align: center;
+  }
+    
+  }
+  .whatsappCol {
+    top:4.0rem;
+    h4 {
+      font-size: 18px;
+      margin-top:0.9rem;
+      color: white;
+    }
+  }
+  .whatsappColTwo {
+    top:20px;
+  }
+  .centerthis {
+    text-align: center;
+  }
+
+  .icons {
+    width:20%;
+  }
+  .icons-footer {
+    margin-top: 2.0rem;
+  }
+
+  .captionText{
+    font-size: 5rem;
+    :hover{
+      text-decoration: none;
+    }
+  }
+
+  .whiteText {
+    margin-top:.9rem;
+    color: white;
+    margin: 5px;
+    width: 50%
+    a{
+      color: white;
+    }
+    :hover{
+      color: white;
+    }
+
+  }
+
+
+.finalCol {
+  background:$new-beige;
+  height:400px;
+  color:black;
+  @media only screen and (min-width:720px) {
+    height:200px;
+  }
+img {
+  width:20%;
+  @media only screen and (min-width:720px) {
+    width:30%;
+  }
+}
+}
+.linksCol {
+  top:20px;
+  margin-bottom: 1.0rem;
+}
+.linksTitle {
+  color:white;
+  // text-decoration: underline;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
