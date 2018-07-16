@@ -38,7 +38,7 @@ app
 
       // Example server-side routing
       server.get('/about', (req, res) => {
-        return app.render(req, res, '/a', req.query)
+        return app.render(req, res, '/about', req.query)
       })
 
     server.post('/user/interest', (req, res) => {
