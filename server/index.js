@@ -3,7 +3,6 @@ const next = require("next");
 const bodyParser = require("body-parser");
 const path = require("path");
 const db = require(path.resolve( __dirname, "./config/db.js" ))
-const env = require(path.resolve( __dirname, "../.env" ))
 const pg = require("pg");
 const WEBPORT = process.env.WEBPORT || 3000;
 const dev = process.env.NODE_ENV !== "production";
@@ -20,7 +19,7 @@ app
     server.use(bodyParser.urlencoded({extended:true}))
     server.use(bodyParser.json());
 
-    server.use('/static', express.static(path.join(__dirname, 'static'), {
+    server.use('/static', express.static(path.join(__dirname, '../static'), {
       maxAge: dev ? '0' : '365d'
     }));
 
