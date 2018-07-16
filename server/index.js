@@ -20,6 +20,18 @@ app
     server.use(bodyParser.urlencoded({extended:true}))
     server.use(bodyParser.json());
 
+    server.use('/static', express.static(path.join(__dirname, 'static'), {
+      maxAge: dev ? '0' : '365d'
+    }));
+
+    server.get('/', (req, res) => {
+      return app.render(req, res, '/index', req.query)
+    })
+
+    // Example server-side routing
+    server.get('/about', (req, res) => {
+      return app.render(req, res, '/about', req.query)
+    })
     server.post('/user/interest', (req, res) => {
       console.log(req.body);
       console.log(`saving user ${req.body.name} with email ${req.body.email} and request ${req.body.message}`);
