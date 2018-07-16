@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 // const db = require(path.resolve( __dirname, "./config/db.js" ))
 // const pg = require("pg");
-const PORT = process.env.WEBPORT || 3000;
+const PORT = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dir: '.', dev });
 const handle = app.getRequestHandler();
