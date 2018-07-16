@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "nodemon server/index.js",
     "build": "next build",
-    "start": "next start",
+    "start": "nodemon server/index.js -p $PORT",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
