@@ -16,6 +16,8 @@ app
   .prepare()
   .then(() => {
     const server = express();
+
+
     if (!dev) {
       // Enforce SSL & HSTS in production
       server.use(function(req, res, next) {
@@ -32,10 +34,13 @@ app
     server.use(bodyParser.urlencoded({extended:true}))
     server.use(bodyParser.json());
 
-    server.use('/static', express.static(path.join(__dirname, '../static'), {
+    server.use('/static', express.static(path.join(__dirname, 'static'), {
       maxAge: dev ? '0' : '365d'
     }));
 
+    server.get('/', (req, res) => {
+      return app.render(req, res, '/', req.query)
+    })
       // Example server-side routing
       server.get('/about', (req, res) => {
         return app.render(req, res, '/about', req.query)
