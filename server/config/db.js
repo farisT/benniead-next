@@ -4,7 +4,7 @@ require ('dotenv').load();
 const sequelize = new Sequelize(process.env.DATABASE_NAME, process.env.DATABASE_USERNAME, process.env.DATABASE_PASSWORD, {
   host: process.env.DATABASE_HOST,
   dialect: process.env.DATABASE_DIALECT,
-  port: process.env.PORT,
+  port: process.env.DB_PORT,
   define: {
     underscored: true // table column names are snake_case not camelCase !!
   }

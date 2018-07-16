@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 // const db = require(path.resolve( __dirname, "./config/db.js" ))
 // const pg = require("pg");
-const WEBPORT = process.env.WEBPORT || 3000;
+const PORT = process.env.WEBPORT || 3000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dir: '.', dev });
 const handle = app.getRequestHandler();
@@ -65,8 +65,8 @@ app
     });
 
 
-    	server.listen(WEBPORT, ()=>{
-	console.log('Running on', WEBPORT)
+    	server.listen(PORT, ()=>{
+	console.log('Running on', PORT)
 	})
 // db.sequelize.sync({ 
 //     force: false, // CHANGE THIS TO FALSE WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
