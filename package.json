@@ -1,19 +1,25 @@
 {
   "name": "create-next-example-app",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server/index.js",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.1.2",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
     "next": "^6.1.1",
     "next-images": "^0.10.5",
     "node-sass": "^4.9.2",
+    "nodemon": "^1.18.2",
+    "pg": "^7.4.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-parallax": "^1.8.0",
-    "reactstrap": "^6.3.0"
+    "reactstrap": "^6.3.0",
+    "sequelize": "^4.38.0"
   }
 }

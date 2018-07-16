@@ -11,31 +11,31 @@ export default class NavBar extends React.Component {
           show: '',
         };
       }
-// async submitData(event) {
-//     event.preventDefault();
-//     let Name = event.target.name.value;
-//     let Email = event.target.email.value
-//     let Message = event.target.message.value
-//     this.setState({
-//       welcomeMessage: 'Awesome to see that you are interested! We will get back to you with more information about our platform', show:'displayNone'
-//     });
-//    await  firebase
-//           .database()
-//           .ref('prospects/')
-//           .push()
-//           .set({
-//             name: Name,
-//             email: Email,
-//             message: Message,   
-//           });
-//         }
+async submitData(event) {
+    event.preventDefault();
+    let Name = event.target.name.value;
+    let Email = event.target.email.value
+    let Message = event.target.message.value
+    const userInterestObject = {
+      name: Name,
+      email:Email,
+      message:Message,
+    }
+    this.setState({
+      welcomeMessage: 'Awesome to see that you are interested! We will get back to you with more information about our platform', show:'displayNone'
+    });
+   await fetch('/user/interest', {
+    method: 'post',
+    body: JSON.stringify(userInterestObject)
+  })
+        }
 
   render() {
      const confirmation = this.state.welcomeMessage;
      const show = this.state.show;
     return (
         <div>
-          <Form className={show} >
+          <Form className={show} onSubmit={this.submitData.bind(this)} >
             <p>Interested in further elaboration? Leave a message!</p>
             <FormGroup>
             <Label>Name</Label>
