@@ -1,0 +1,8 @@
+.finalCol {
+    background:$new-beige;
+    height:400px;
+    color:black;
+    text-align: center;
+    @media only screen and (min-width:720px) {
+      height:200px;
+    }
