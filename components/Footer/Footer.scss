@@ -6,3 +6,11 @@
     @media only screen and (min-width:720px) {
       height:200px;
     }
+  img {
+    width:20%;
+    text-align: center;
+    @media only screen and (min-width:720px) {
+      width:30%;
+    }
+  }
+  }

@@ -90,22 +90,6 @@ html,body {
   }
 
 
-.finalCol {
-  background:$new-beige;
-  height:400px;
-  color:black;
-  text-align: center;
-  @media only screen and (min-width:720px) {
-    height:200px;
-  }
-img {
-  width:20%;
-  text-align: center;
-  @media only screen and (min-width:720px) {
-    width:30%;
-  }
-}
-}
 .linksCol {
   top:20px;
   margin-bottom: 1.0rem;
